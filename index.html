@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulasi Lampu</title>
+    <style>
+        body { text-align: center; font-family: sans-serif; }
+        .rangkaian { margin-bottom: 40px; }
+        .grup-lampu { display: flex; justify-content: center; gap: 20px; }
+        .item-lampu { text-align: center; }
+        img { width: 80px; display: block; margin-bottom: 10px; }
+        button { padding: 8px; margin: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <h2>Simulasi Rangkaian 1 & 2</h2>
+
+    <div class="rangkaian">
+        <h3>Rangkaian 1 (3 Lampu)</h3>
+        <div class="grup-lampu">
+            <div class="item-lampu">
+                <img id="l1" src="images/off.gif" alt="Lampu 1">
+                <button onclick="tekanLampu('l1')">Lampu 1</button>
+            </div>
+            <div class="item-lampu">
+                <img id="l2" src="images/off.gif" alt="Lampu 2">
+                <button onclick="tekanLampu('l2')">Lampu 2</button>
+            </div>
+            <div class="item-lampu">
+                <img id="l3" src="images/off.gif" alt="Lampu 3">
+                <button onclick="tekanLampu('l3')">Lampu 3</button>
+            </div>
+        </div>
+        <br>
+        <button onclick="tekanGrup(['l1', 'l2', 'l3'])">Semua Lampu R1</button>
+    </div>
+
+    <hr> <div class="rangkaian">
+        <h3>Rangkaian 2 (4 Lampu)</h3>
+        <div class="grup-lampu">
+            <div class="item-lampu">
+                <img id="la" src="images/off.gif" alt="Lampu A">
+                <button onclick="tekanLampu('la')">Lampu A</button>
+            </div>
+            <div class="item-lampu">
+                <img id="lb" src="images/off.gif" alt="Lampu B">
+                <button onclick="tekanLampu('lb')">Lampu B</button>
+            </div>
+            <div class="item-lampu">
+                <img id="lc" src="images/off.gif" alt="Lampu C">
+                <button onclick="tekanLampu('lc')">Lampu C</button>
+            </div>
+            <div class="item-lampu">
+                <img id="ld" src="images/off.gif" alt="Lampu D">
+                <button onclick="tekanLampu('ld')">Lampu D</button>
+            </div>
+        </div>
+        <br>
+        <button onclick="tekanGrup(['la', 'lb'])">Grup (A, B)</button>
+        <button onclick="tekanGrup(['lc', 'ld'])">Grup (C, D)</button>
+        <button onclick="tekanGrup(['la', 'lb', 'lc', 'ld'])">Semua Lampu R2</button>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
